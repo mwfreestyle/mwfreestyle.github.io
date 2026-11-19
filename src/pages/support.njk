@@ -1,0 +1,27 @@
+---
+title: Safety & Support
+layout: base.njk
+permalink: /support/
+---
+<h1>Safety &amp; Support</h1>
+<p>{{ support.intro }}</p>
+
+<div class="audience-cards">
+{% for id in ["safeSport", "funding"] %}
+  {% set group = support[id] %}
+  <div class="card" id="{{ id }}">
+    <h2>{{ group.title }}</h2>
+    <p>{{ group.summary }}</p>
+    <ul>
+    {% for key, item in group.items %}
+      <li>
+        <a href="{{ item.url }}" rel="noopener">{{ item.label }}</a>
+        <br>{{ item.text }}
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+{% endfor %}
+</div>
+
+<p>See also <a href="{{ support.policiesLink }}">Forms and Policies</a>.</p>

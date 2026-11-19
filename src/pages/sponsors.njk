@@ -1,0 +1,10 @@
+---
+title: Sponsors & Donors
+layout: base.njk
+permalink: /sponsors/
+---
+
+{{ "src/content/sponsors.md" | markdownFile | safe }}
+
+{% from "partials/sponsor-tiers.njk" import tierList %}
+{{ tierList(sponsors, "sponsor-tier") }}

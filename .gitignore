@@ -1,0 +1,8 @@
+.env
+*.tar.gz
+node_modules/
+_site/
+deploy.sh
+scaffold*.sh
+TODO
+setup.md

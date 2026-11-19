@@ -1,0 +1,35 @@
+{
+  "items": [
+    {
+      "label": "About The Club",
+      "url": null,
+      "children": [
+        { "label": "Our Mission", "url": "/mission/" },
+        { "label": "Coaches", "url": "/coaches/" },
+        { "label": "Board of Directors", "url": "/board-of-directors/" },
+        { "label": "Find Us", "url": "/contact/" }
+      ]
+    },
+    {
+      "label": "Programs",
+      "url": null,
+      "children": [
+        { "label": "Full Season", "url": "/full-season/" },
+        { "label": "Training Camps", "url": "/camps/" },
+        { "label": "Dryland Training", "url": "/trampoline/" }
+      ]
+    },
+    { "label": "Schedule", "url": "/schedule/" },
+    {
+      "label": "Parent Resources",
+      "url": null,
+      "children": [
+        { "label": "Volunteer", "url": "/volunteer/" },
+        { "label": "Travel", "url": "/travel/" },
+        { "label": "Hill Map", "url": "/map/" },
+        { "label": "Safety & Support", "url": "/support/"}
+      ]
+    },
+    { "label": "Store", "url": "/store/" }
+  ]
+}

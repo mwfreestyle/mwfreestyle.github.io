@@ -1,0 +1,27 @@
+---
+title: Full Season Programs
+layout: base.njk
+permalink: /full-season/
+---
+
+{{ "src/content/full-season.md" | markdownFile | safe }}
+
+<div class="program-grid">
+  {% for key, program in programList %}
+    {% if program.type == "fullSeason" %}
+      <a href="/{{ program.slug }}/" class="program-card">
+        <img
+          src="{{ program.image }}"
+          alt="{{ program.name }}"
+          class="program-card__img"
+        >
+        <h2 class="program-card__title">
+          {{ program.name }}
+        </h2>
+        <p class="program-card__blurb">
+          {{ program.blurb }}
+        </p>
+      </a>
+    {% endif %}
+  {% endfor %}
+</div>

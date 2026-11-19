@@ -1,0 +1,204 @@
+{
+  "_defaults": {
+    "hours": "9:00AM to 3:00PM",
+    "volunteerDeposit": "$300",
+    "snowregUrl": "https://upliftersnow.com/#!/events/mount-washington-freestyle-club-2027",
+    "prices": [
+      { "label": "", "value": "TBA", "days": "" }
+    ]
+  },
+
+  "_fragments": {
+    "faq": "See the [FAQ](/faq/) for more program details.",
+   "deposit": "Price shown is the program fee. A separate {{ p.volunteerDeposit }} Volunteer Deposit is added at registration.",
+    "reqClub": "**Club Registration** fee pays for your local coaching, training facilities, equipment, and club operations.",
+    "reqMembership": "**Freestyle BC / Canada Membership** fee is mandatory for every single participant. It provides vital insurance coverage.",
+    "reqSocks": "Trampoline socks available for purchase at Airhouse.",
+    "reqWaiver": "Airhouse waiver to be signed before participation.",
+    "reqWinterProgram": "No drop-ins. No refunds. Athletes must be in the winter program.",
+    "reqTimberTour": "**Timber Tour** competitors will require a [Freestyle BC](https://www.freestylebc.ski/) provincial membership. Upgrades can be made during the season.",
+    "reqIfsa": "**IFSA** competitors will require an [IFSA](https://ifsafreeride.org/) membership plus the regional [Western Canada Freeride](https://www.westerncanadafreeride.ca/) membership.",
+    "reqBackProtector": "**Back protector** required.",
+    "paymentPlan": "Payment plan available: email the registrar at [](email:info) to set up. 50% paid at time of registration, 50% paid by e-transfer before the program starts."
+  },
+
+
+    "fundamentalz": {
+      "type": "fullSeason",
+      "name": "Fundamentalz",
+      "image": "/img/programs/fundamentalz.webp",
+      "blurb": "Build core balance and control before diving into freestyle.",
+      "age": "7 to 10",
+      "schedule": { "start": "January 2", "end": "March 21" },
+      "prices": [
+        { "label": "1 day/week", "value": "$832", "days": "12" }
+      ],
+      "requirements": ["reqClub", "reqMembership"],
+      "notes": {
+        "schedule": ["faq"],
+        "cost": ["deposit"],
+        "extra": ["paymentPlan"]
+      }
+    },
+
+    "freestylerz": {
+        "type": "fullSeason",
+        "name": "Freestylerz",
+        "image": "/img/programs/freestylerz.webp",
+        "blurb": "Our core park program, building freestyle skills at a competitive-track level.",
+        "age": "13 to 17",
+        "schedule": {
+          "start": "January 2",
+          "end": "March 21"
+        },
+        "prices": [
+          { "label": "1 day/week", "value": "$950", "days": "12" },
+          { "label": "2 days/week", "value": "$1742", "days": "24" }
+        ],
+        "included": ["Holiday Camp", "Spring Break Camp"],
+        "requirements": ["reqClub", "reqMembership"],
+        "notes": {
+          "schedule": ["faq"],
+          "cost": ["deposit"],
+          "extra": ["paymentPlan"]
+        }
+  },
+
+    "jrFreestylerz": {
+      "type": "fullSeason",
+      "name": "Jr Freestylerz",
+      "image": "/img/programs/freestylerz.webp",
+      "blurb": "Younger park program, building freestyle skills.",
+      "age": "9 to 12",
+      "schedule": { "start": "January 2", "end": "March 21" },
+      "prices": [
+        { "label": "1 day/week", "value": "$950", "days": "12" },
+        { "label": "2 days/week", "value": "$1742", "days": "24" }
+      ],
+      "included": ["Holiday Camp", "Spring Break Camp"],
+      "requirements": ["reqClub", "reqMembership"],
+      "notes": {
+        "schedule": ["faq"],
+        "cost": ["deposit"],
+        "extra": ["paymentPlan"]
+      }
+    },
+
+
+    "freeride": {
+          "type": "fullSeason",
+          "name": "Freeride Comp Team",
+          "image": "/img/programs/freeride.webp",
+          "blurb": "Big mountain skiing in the powder and steeps of Mount Washington.",
+          "age": "11+",
+          "schedule": { "start": "January 2", "end": "March 21" },
+          "prices": [
+            { "label": "1 day/week", "value": "$1694", "days": "+/- 26" },
+            { "label": "2 days/week", "value": "$2420", "days": "+/- 38" }
+          ],
+          "included": ["Holiday Camp", "Spring Break Camp", "Coaching for 2 events"],
+          "requirements": ["reqClub", "reqMembership", "reqIfsa", "reqBackProtector"],
+          "notes": {
+            "schedule": ["faq"],
+            "cost": ["deposit"],
+            "extra": ["paymentPlan"]
+          }
+    },
+
+    "competitiveFreestyle": {
+      "type": "fullSeason",
+      "name": "Competitive Freestyle",
+      "image": "/img/programs/competitive-freestyle.webp",
+      "blurb": "For athletes actively competing or training toward provincial/national events.",
+      "age": "10 to 17",
+      "schedule": { "start": "January 2", "end": "March 28" },
+      "prices": [
+        { "label": "2 days/week", "value": "$2662", "days": "+/- 42" }
+      ],
+      "included": ["Holiday Camp", "Spring Break Camp", "Coaching for 3 events"],
+      "requirements": ["reqClub", "reqMembership", "reqTimberTour"],
+      "notes": {
+        "schedule": ["faq"],
+        "cost": ["deposit"],
+        "extra": ["paymentPlan"]
+      }
+    },
+
+    "fridayTraining": {
+      "type": "fullSeason",
+      "name": "Friday Training",
+      "image": "/img/programs/friday-training.webp",
+      "blurb": "Optional extra day of training for athletes already registered in Jr Freestylerz, Freestylerz, Freeride or Comp Team programs.",
+      "age": "9+",
+      "snowregUrl": "https://upliftersnow.com/#!/events/mwfc-friday-training-2027",
+      "schedule": { "start": "January 8", "end": "March 19" },
+      "prices": [
+        { "label": "11 Fridays", "value": "$787", "days": "" }
+      ],
+      "requirements": ["reqClub", "reqMembership"],
+      "notes": {
+        "schedule": ["faq"],
+        "cost": [],
+        "extra": []
+      }
+    },
+
+    "holidayCamp": {
+      "type": "camp",
+      "name": "Holiday Camp",
+      "image": "/img/programs/holiday-camp.webp",
+      "blurb": "For skiers who prefer slopes over holiday breaks.",
+      "age": "9+",
+      "snowregUrl": "",
+      "schedule": { "start": "December 27", "end": "December 29" },
+      "prices": [
+        { "label": "3 day camp", "value": "TBA", "days": "" }
+      ],
+      "notes": {
+        "schedule": ["faq"]
+      }
+    },
+
+    "springCamp": {
+      "type": "camp",
+      "name": "Spring Break Camp",
+      "image": "/img/programs/spring-camp.webp",
+      "blurb": "For skiers who trade spring break for spring snow.",
+      "age": "9+",
+      "snowregUrl": "",
+      "schedule": { "start": "TBA", "end": "" },
+      "prices": [
+        { "label": "3 days camp", "value": "TBA", "days": "" }
+      ],
+      "notes": {
+        "schedule": ["faq"]
+      }
+    },
+
+    "trampoline": {
+        "type": "dryland",
+        "name": "Trampoline",
+        "image": "/img/programs/trampoline.webp",
+        "blurb": "Pre-season air sense, agility and coordination.",
+        "age": "9+",
+        "snowregUrl": "https://upliftersnow.com/#!/events/mwfc-comp-team-trampoline-training-2026",
+        "hours": "6:30PM to 8:30PM",
+        "schedule": {
+          "start": "October 16",
+          "end": "December 4"
+        },
+        "prices": [
+          { "label": "8 Fridays", "value": "$320", "days": "", "star": false },
+          { "label": "4 Fridays", "value": "$160", "days": "" }
+        ],
+        "included": [],
+        "requirements": ["reqMembership", "reqSocks", "reqWaiver", "reqWinterProgram"],
+        "notes": {
+          "schedule": ["faq"],
+          "cost": [
+            "Choose the first 4 Fridays (Oct 16 to Nov 6) or the last 4 Fridays (Nov 13 to Dec 4)."
+          ],
+          "extra": []
+        }
+    }
+}

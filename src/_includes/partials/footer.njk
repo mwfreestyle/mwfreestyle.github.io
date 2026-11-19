@@ -1,0 +1,15 @@
+<footer class="site-footer">
+  <nav class="footer-nav" aria-label="Footer">
+    <ul>
+      {% for item in footerNav.items %}
+        <li>
+          <a href="{{ item.url }}">{{ item.label }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+
+  <p>
+    &copy; {{ currentYear }} {{ site.title }}
+  </p>
+</footer>

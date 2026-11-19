@@ -1,0 +1,23 @@
+{
+  "places": [
+    { "id": "meeting", "name": "Meeting Point",
+        "color": "#7b3fa0",
+      "lat": 49.741315, "lng": -125.303895,
+      "note": "Pick up and drop off\nLower Cafeteria" },
+    { "id": "main-park", "name": "Main Park",
+        "color": "#d6247f",
+      "lat": 49.748360, "lng": -125.293412, "note": "" },
+    { "id": "small-park", "name": "Small Park",
+        "color": "#e69f00",
+      "lat": 49.744061, "lng": -125.304556, "note": "" },
+    { "id": "airbag", "name": "Airbag/MWFC Sea Can",
+        "color": "#0a8f8f",
+      "lat": 49.743234, "lng": -125.297994, "note": "" },
+    { "id": "mogul-shed", "name": "Mogul Shed",
+        "color": "#0072b2",
+      "lat": 49.744614, "lng": -125.296782, "note": "" },
+    { "id": "first-aid", "name": "First Aid Shack",
+        "color": "#3a9d23",
+      "lat": 49.741096, "lng": -125.312150, "note": "" }
+  ]
+}

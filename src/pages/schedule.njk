@@ -1,0 +1,131 @@
+---
+title: Schedule
+layout: base.njk
+permalink: /schedule/
+description: Upcoming Mount Washington Freestyle Club events.
+---
+
+{{ "src/content/schedule.md" | markdownFile | safe }}
+
+<h2 class="schedule-heading">Program Dates</h2>
+<table class="schedule-table schedule-table--programs">
+  <thead>
+    <tr>
+      <th scope="col">Program</th>
+      <th scope="col">Starts</th>
+      <th scope="col">Ends</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for key, p in programs %}
+      {% if p.type == "fullSeason" or p.type == "camp" %}
+      <tr>
+        <td data-label="Program">
+          {% for pg in collections.all %}
+            {% if pg.data.program == key %}
+              <a href="{{ pg.url }}">{{ p.name }}</a>
+            {% endif %}
+          {% endfor %}
+        </td>
+        <td data-label="Starts">{{ p.schedule.start or "TBA" }}</td>
+        <td data-label="Ends">{{ p.schedule.end or "TBA" }}</td>
+      </tr>
+      {% endif %}
+    {% endfor %}
+  </tbody>
+</table>
+
+<div class="schedule-tabs" data-tabs>
+  <div class="schedule-tabs__list" role="tablist"
+       aria-label="Event type" hidden>
+    <button type="button" role="tab" id="tab-freestyle"
+            aria-controls="panel-freestyle"
+            aria-selected="true">Freestyle</button>
+    <button type="button" role="tab" id="tab-freeride"
+            aria-controls="panel-freeride"
+            aria-selected="false">Freeride</button>
+  </div>
+
+  <section id="panel-freestyle" role="tabpanel"
+           aria-labelledby="tab-freestyle">
+    <h2 class="schedule-heading">Freestyle</h2>
+    <table class="schedule-table schedule-table--freestyle">
+      <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Event</th>
+          <th scope="col">Location</th>
+          <th scope="col">Level</th>
+          <th scope="col">Disciplines</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for event in computedSchedule %}
+          {% if event.type == "freestyle" %}
+          <tr>
+            <td class="event-dates" data-label="Date">
+              {{ event.startDate | dateRange(event.endDate) }}
+            </td>
+            <td class="event" data-label="Event">{{ event.title }}</td>
+            <td class="event-location" data-label="Location">{{ event.location }}</td>
+            <td class="event-level" data-label="Level">{{ event.level }}</td>
+            <td class="event-disciplines" data-label="Disciplines">
+              {% if event.disciplines %}
+                {{ event.disciplines | join(", ") }}
+              {% endif %}
+            </td>
+          </tr>
+          {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
+
+  <section id="panel-freeride" role="tabpanel"
+           aria-labelledby="tab-freeride">
+    <h2 class="schedule-heading">Freeride</h2>
+    <table class="schedule-table schedule-table--freeride">
+      <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Event</th>
+          <th scope="col">Location</th>
+          <th scope="col">Registration</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for event in computedSchedule %}
+          {% if event.type == "freeride" %}
+          <tr>
+            <td class="event-dates" data-label="Date">
+              {{ event.startDate | dateRange(event.endDate) }}
+            </td>
+            <td class="event" data-label="Event">{{ event.title }}</td>
+            <td class="event-location" data-label="Location">{{ event.location }}</td>
+            <td class="event-reg" data-label="Registration opens">
+              <div class="event-reg__body">
+                {% if event.registrationOpens %}
+                  <div class="event-reg__date">
+                    {{ event.registrationOpens | dateRange }}
+                  </div>
+                {% endif %}
+                {% if event.liveheatsId %}
+                  <a class="snowreg-btn snowreg-btn--cell"
+                     href="https://liveheats.com/events/{{ event.liveheatsId }}"
+                     target="_blank"
+                     rel="noopener noreferrer">Register</a>
+                {% endif %}
+              </div>
+            </td>
+          </tr>
+          {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
+    <div class="schedule-note callout">
+      {{ "src/content/freeride-note.md" | markdownFile | safe }}
+    </div>
+  </section>
+</div>
+
+<script src="/js/schedule-tabs.js" defer></script>

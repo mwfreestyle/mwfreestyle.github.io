@@ -1,0 +1,150 @@
+[
+  {
+    "title": "Timber Tour #1",
+    "startDate": "2027-01-21",
+    "endDate": "2027-01-24",
+    "location": "Fernie",
+    "level": "provincial",
+    "type": "freestyle",
+    "disciplines": ["Slopestyle", "Big Air", "Moguls"]
+  },
+  {
+    "title": "Timber Tour #2",
+    "startDate": "2027-02-18",
+    "endDate": "2027-02-21",
+    "location": "Sun Peaks",
+    "level": "provincial",
+    "type": "freestyle",
+    "disciplines": ["Moguls", "Dual Moguls", "Slopestyle"]
+  },
+  {
+    "title": "Timber Tour #3",
+    "subtitle": "Provincial Finals",
+    "startDate": "2027-03-04",
+    "endDate": "2027-03-07",
+    "location": "Apex",
+    "level": "provincial",
+    "type": "freestyle",
+    "disciplines": ["Moguls", "Dual Moguls", "Slopestyle", "Big Air"]
+  },
+  {
+    "title": "Junior 2*",
+    "startDate": "2027-01-02",
+    "endDate": "2027-01-03",
+    "location": "Whistler",
+    "type": "freeride",
+    "stars": 2,
+    "registrationOpens": "2026-11-19",
+    "liveheatsId": 556491
+  },
+  {
+    "title": "Junior 2*",
+    "startDate": "2027-01-08",
+    "endDate": "2027-01-10",
+    "location": "Whitewater",
+    "type": "freeride",
+    "stars": 2,
+    "registrationOpens": "2026-12-03",
+    "liveheatsId": 556493
+  },
+  {
+    "title": "Junior 3*",
+    "startDate": "2027-01-15",
+    "endDate": "2027-01-17",
+    "location": "Kicking Horse",
+    "type": "freeride",
+    "stars": 3,
+    "registrationOpens": "2026-11-02",
+    "liveheatsId": 556429
+  },
+  {
+    "title": "Junior 2*",
+    "startDate": "2027-01-22",
+    "endDate": "2027-01-24",
+    "location": "Kimberley",
+    "type": "freeride",
+    "stars": 2,
+    "registrationOpens": "2026-12-10",
+    "liveheatsId": 556505
+  },
+  {
+    "title": "Junior 2*",
+    "startDate": "2027-01-29",
+    "endDate": "2027-01-31",
+    "location": "Panorama",
+    "type": "freeride",
+    "stars": 2,
+    "registrationOpens": "2026-12-17",
+    "liveheatsId": 556519
+  },
+  {
+    "title": "Junior 3*",
+    "startDate": "2027-01-29",
+    "endDate": "2027-01-31",
+    "location": "Red Mountain",
+    "type": "freeride",
+    "stars": 3,
+    "registrationOpens": "2026-11-02",
+    "liveheatsId": 556430
+  },
+  {
+    "title": "Junior 2*",
+    "startDate": "2027-02-05",
+    "endDate": "2027-02-07",
+    "location": "Fernie",
+    "type": "freeride",
+    "stars": 2,
+    "registrationOpens": "2027-01-07",
+    "liveheatsId": 556528
+  },
+  {
+    "title": "Junior 2*",
+    "startDate": "2027-02-19",
+    "endDate": "2027-02-21",
+    "location": "Revelstoke",
+    "type": "freeride",
+    "stars": 2,
+    "registrationOpens": "2027-01-07",
+    "liveheatsId": 556559
+  },
+  {
+    "title": "Junior 3*",
+    "startDate": "2027-02-26",
+    "endDate": "2027-02-28",
+    "location": "Lake Louise",
+    "type": "freeride",
+    "stars": 3,
+    "registrationOpens": "2026-11-02",
+    "liveheatsId": 556435
+  },
+  {
+    "title": "Junior 2*",
+    "startDate": "2027-03-06",
+    "endDate": "2027-03-07",
+    "location": "Castle Mountain",
+    "type": "freeride",
+    "stars": 2,
+    "registrationOpens": "2027-01-21",
+    "liveheatsId": 556549
+  },
+  {
+    "title": "Junior 3*",
+    "startDate": "2027-03-12",
+    "endDate": "2027-03-14",
+    "location": "Whistler",
+    "type": "freeride",
+    "stars": 3,
+    "registrationOpens": "2026-11-02",
+    "liveheatsId": 556444
+  },
+  {
+    "title": "Regional Championship 2*",
+    "startDate": "2027-03-19",
+    "endDate": "2027-03-21",
+    "location": "Kicking Horse",
+    "type": "freeride",
+    "stars": 2,
+    "registrationOpens": "2027-02-04",
+    "liveheatsId": 556578
+  }
+]

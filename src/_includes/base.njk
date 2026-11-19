@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <title>
+    {{ title }} | {{ site.shortTitle }}
+  </title>
+  <meta name="description"
+        content="{{ description or site.description }}">
+  <link rel="stylesheet" href="/css/style.css">
+  {% for f in extraCss %}
+  <link rel="stylesheet" href="{{ f }}">
+  {% endfor %}
+<link rel="icon" href="/img/favicon.svg?v=ski-v1" type="image/svg+xml">
+<link rel="icon" href="/img/favicon.ico?v=ski-v1" sizes="any">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png?v=ski-v1">
+</head>
+<body class="{{ bodyClass or '' }}">
+  {% include "partials/nav.njk" %}
+
+  <main class="{{ mainClass or '' }}">
+    {{ content | safe }}
+  </main>
+  {% if page.url != "/sponsors/" %}
+    {% include "partials/sponsor-band.njk" %}
+  {% endif %} 
+  {% include "partials/footer.njk" %}
+
+  <script src="/js/nav.js" defer></script>
+  <script src="/js/contact.js" defer></script>
+  {% for f in extraJs %}
+  <script src="{{ f }}" defer></script>
+  {% endfor %}
+</body>
+</html>

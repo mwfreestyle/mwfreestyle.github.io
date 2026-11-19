@@ -1,0 +1,72 @@
+---
+title: Coaches
+layout: base.njk
+permalink: /coaches/
+---
+
+<section class="page-intro">
+{{ "src/content/coaches.md" | markdownFile | safe }}
+
+</section>
+
+<section class="coaches-section">
+  <ul class="coach-grid" role="list">
+    {% for coach in coaches %}
+    {% set bioId = "coach-bio-" ~ loop.index %}
+    <li class="coach-card">
+      <div class="coach-card-inner">
+
+        <div class="coach-face coach-face-front">
+          {% if coach.photo | coachPhotoExists %}
+<img class="coach-photo"
+     src="/img/coaches/{{ coach.photo }}"
+     alt="" loading="lazy">
+{% else %}
+<div class="coach-photo coach-photo-missing">
+  Photo coming soon
+</div>
+{% endif %}
+          <h2 class="coach-name">
+            {{ coach.name }}
+            {%- if coach.nickname %}
+            <span class="coach-nickname">"{{ coach.nickname }}"</span>
+            {%- endif %}
+          </h2>
+          {% if coach.title %}
+          <p class="coach-title">{{ coach.title }}</p>
+          {% endif %}
+          <button type="button" class="coach-flip coach-flip-open"
+                  aria-expanded="false" aria-controls="{{ bioId }}">
+            Read bio<span class="visually-hidden">
+            of {{ coach.name }}</span>
+          </button>
+        </div>
+
+        <div class="coach-face coach-face-back" id="{{ bioId }}" inert>
+          <h2 class="coach-name coach-name-back">{{ coach.name }}</h2>
+          <div class="coach-bio-scroll" tabindex="0" role="region"
+               aria-label="Bio of {{ coach.name }}">
+            {% if coach.bio %}
+              {% set bio = coach.bio | replace("\r\n", "\n") %}
+              {% for para in bio.split("\n\n") %}
+              {% if para | trim %}
+              <p class="coach-bio">{{ para | trim }}</p>
+              {% endif %}
+              {% endfor %}
+            {% else %}
+              <p class="coach-bio coach-bio-empty">Bio coming soon.</p>
+            {% endif %}
+          </div>
+          <button type="button" class="coach-flip coach-flip-close">
+            Back<span class="visually-hidden">
+            to {{ coach.name }}</span>
+          </button>
+        </div>
+
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<script src="/js/coach-flip.js" defer></script>

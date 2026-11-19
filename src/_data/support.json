@@ -1,0 +1,36 @@
+{
+  "intro": "Safety and funding resources for MWFC families.",
+  "policiesLink": "/policies/",
+  "safeSport": {
+    "title": "Safe Sport",
+    "summary": "Where to learn the rules and report a concern.",
+    "items": {
+      "freestyleBC": {
+        "label": "Freestyle BC Safe Sport",
+        "text": "Policies, training and independent reporting.",
+        "url": "https://www.freestylebc.ski/safesport"
+      },
+      "viaSport": {
+        "label": "viaSport Safety in Sport",
+        "text": "PlaySafe, Flag Tool and complaints guidance.",
+        "url": "https://viasport.ca/safety/"
+      }
+    }
+  },
+  "funding": {
+    "title": "Funding Help",
+    "summary": "Programs that help with the cost of sport.",
+    "items": {
+      "jumpstart": {
+        "label": "Jumpstart",
+        "text": "Grants for children 4 to 18 from low-income families.",
+        "url": "https://jumpstart.canadiantire.ca/pages/individual-child-grants"
+      },
+      "ferries": {
+        "label": "BC Ferries Sport Experience Program",
+        "text": "Ferry vouchers for athletes, coaches and clubs.",
+        "url": "https://viasport.ca/grants/bc-ferries-sport-experience-program/"
+      }
+    }
+  }
+}

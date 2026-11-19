@@ -1,0 +1,79 @@
+---
+layout: base.njk
+---
+
+<h1>{{ p.name }}</h1>
+
+<p><strong>Ages {{ p.age }}</strong></p>
+
+{{ content | safe }}
+
+{% if p.requirements | length %}
+<h3>The Requirements</h3>
+<ol class="callout">
+  {% for r in p.requirements %}
+  <li>{{ r | note(p) | safe }}</li>
+  {% endfor %}
+</ol>
+{% endif %}
+
+{% if p.included | length %}
+<h3>Included</h3>
+<ul class="callout">
+  {% for i in p.included %}
+  <li>{{ i | note(p) | safe }}</li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+<h3>Training Schedule</h3>
+
+<p>
+    <strong>Dates:</strong> {{ p.schedule.start or "TBA" }}
+    {%- if p.schedule.start and p.schedule.end %} to
+    {{ p.schedule.end }}{% endif %}<br>
+    <strong>Hours:</strong> {{ p.hours }}
+</p>
+
+{% if p.notes.schedule | length %}
+  <p class="footnote">
+    {%- for n in p.notes.schedule %}
+      {{ n | note(p) | safe }}
+    {%- endfor %}
+  </p>
+{% endif %}
+
+<h3>Cost</h3>
+
+<div class="price-stats">
+  {% for price in p.prices %}
+    {% set star = p.notes.cost | length
+       and price.star != false
+       and price.value != "TBA" %}
+    <div class="price-stat">
+      <span class="price-stat__value">{{ price.value }}{% if star
+        %}<sup>*</sup>{% endif %}</span>
+      {% if price.label %}
+        <span class="price-stat__label">
+          {{ price.label }}{% if price.days %}
+          ({{ price.days }} days){% endif %}
+        </span>
+      {% endif %} 
+    </div>
+  {% endfor %}
+</div>
+
+{% if p.notes.cost | length %}
+  <p class="footnote">
+    <sup>*</sup>
+    {%- for n in p.notes.cost %}
+      {{ n | note(p) | safe }}
+    {%- endfor %}
+  </p>
+{% endif %}
+
+{% for n in p.notes.extra %}
+  <p>{{ n | note(p) | safe }}</p>
+{% endfor %}
+
+{% snowregButton p.snowregUrl %}

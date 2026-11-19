@@ -1,0 +1,9 @@
+{
+  "items": [
+    { "label": "Sponsors & Donors", "url": "/sponsors/" },
+    { "label": "Forms and Policies", "url": "/policies/" },
+    { "label": "Job Postings", "url": "/jobs/" },
+    { "label": "Contact & Find Us", "url": "/contact/" },
+    { "label": "FAQ", "url": "/faq/" }
+  ]
+}

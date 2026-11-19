@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Coastal Community Private Wealth",
+    "level": "title",
+    "img": "cc-private-wealth.webp",
+    "link": "https://coastalwealth.ca/"
+  },
+  {
+    "name": "Aviso Wealth",
+    "level": "title",
+    "img": "aw_logo.webp",
+    "link": "https://www.aviso.ca/en"
+  },
+  {
+    "name": "Scotia Wealth Management",
+    "level": "gold",
+    "img": "scotia.webp",
+    "link": "https://www.scotiawealthmanagement.com/"
+  },
+  {
+    "name": "Duncan Allen Law LLP",
+    "level": "silver",
+    "img": "allen-law.webp",
+    "link": "https://duncanallenlaw.com/"
+  },
+  {
+    "name": "Ski Tak",
+    "level": "silver",
+    "img": "ski-tak-1.webp",
+    "link": "https://www.skitakhut.com/"
+  },
+  {
+    "name": "Mt Washington",
+    "level": "silver",
+    "img": "mtwashy.webp",
+    "link": "https://www.mountwashington.ca/"
+  },
+  {
+    "name": "Edgett Excavating",
+    "level": "silver",
+    "img": "edgett.webp",
+    "link": "http://edgettexcavating.ca"
+  },
+  {
+    "name": "Hinds Blinds",
+    "level": "silver",
+    "img": "HB-logo.webp",
+    "link": "https://www.hindsblinds.ca/"
+  },
+  {
+    "name": "Vectis Custom Homes",
+    "level": "bronze",
+    "img": "vectis.webp",
+    "link": "https://www.vectiscustomhomes.ca"
+  },
+  {
+    "name": "Supertech",
+    "level": "bronze",
+    "img": "supertech.webp",
+    "link": "https://supertechauto.ca/"
+  }
+]

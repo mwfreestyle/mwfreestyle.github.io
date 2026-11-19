@@ -1,0 +1,30 @@
+---
+title: Training Camps
+layout: base.njk
+section: programs
+subsection: camps
+permalink: /camps/
+order: 21
+---
+
+{{ "src/content/camps.md" | markdownFile | safe }}
+
+<div class="program-grid">
+  {% for key, program in programList %}
+    {% if program.type == "camp" %}
+      <a href="/{{ program.slug }}/" class="program-card">
+        <img
+          src="{{ program.image }}"
+          alt="{{ program.name }}"
+          class="program-card__img"
+        >
+        <h2 class="program-card__title">
+          {{ program.name }}
+        </h2>
+        <p class="program-card__blurb">
+          {{ program.blurb }}
+        </p>
+      </a>
+    {% endif %}
+  {% endfor %}
+</div>

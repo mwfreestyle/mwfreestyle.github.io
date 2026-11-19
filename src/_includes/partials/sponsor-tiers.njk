@@ -1,0 +1,47 @@
+{% macro tierList(sponsors, wrapperClass, theme="light") %}
+  {% set levels = [
+    { slug: "title", name: "Title Sponsors" },
+    { slug: "gold", name: "Gold Level" },
+    { slug: "silver", name: "Silver Level" },
+    { slug: "bronze", name: "Bronze Level" }
+  ] %}
+
+  {% for level in levels %}
+    {% set tierSponsors = [] %}
+    {% for s in sponsors %}
+      {% if s.level == level.slug %}
+        {% set tierSponsors = (
+          tierSponsors.push(s), tierSponsors
+        ) %}
+      {% endif %}
+    {% endfor %}
+
+    {% if tierSponsors.length %}
+      <div class="{{ wrapperClass }}
+                  {{ wrapperClass }}--{{ level.slug }}">
+        {% if wrapperClass == "sponsor-tier" %}
+          <h2>{{ level.name }}</h2>
+        {% endif %}
+        <div class="sponsor-logos">
+          {% for s in tierSponsors %}
+            {% set logoSrc = s.img %}
+            {% if theme == "dark" and s.imgDark %}
+              {% set logoSrc = s.imgDark %}
+            {% endif %}
+
+            {% if s.link %}
+              <a href="{{ s.link }}" class="sponsor-link"
+                 title="Visit {{ s.name }}">
+                <img src="/img/sponsors/{{ logoSrc }}"
+                     alt="{{ s.name }}">
+              </a>
+            {% else %}
+              <img src="/img/sponsors/{{ logoSrc }}"
+                   alt="{{ s.name }}">
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+{% endmacro %}
