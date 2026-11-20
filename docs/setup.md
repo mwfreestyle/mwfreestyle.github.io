@@ -1,6 +1,6 @@
 # MWFC site setup
 
-Eleventy 3 static site. Input `src/`, output `_site/`.
+Eleventy static site. Input `src/`, output `_site/`.
 
 ## Commands
 
@@ -19,19 +19,26 @@ Deploy: push to `main`. GitHub Actions builds and publishes.
 * Pages source: repo Settings > Pages > GitHub Actions
 * Custom domain: set in repo Settings > Pages (one at a time)
 * Default address: mwfreestyle.github.io
-* Current (Nov, 2026) siteground.net, A record 35.215.123.236
+* Old host: SiteGround, A record 35.215.123.236. Kept only
+  for rollback.
 
 ## DNS (mwfreestyle.com)
 
-Registrar: GoDaddy
+Registrar and DNS: GoDaddy
 
 * `@`    A      185.199.108.153, .109.153, .110.153, .111.153
 * `www`  CNAME  mwfreestyle.github.io
-* Delete old A/CNAME records pointing to the WordPress host
-* Leave MX and TXT (mail) records alone
-* Current (Nov, 2026) GoDaddy.com
+* `_github-pages-challenge-mwfreestyle`  TXT  (GitHub code)
+  Verified 2026-11-19. Never delete it, or the domain loses
+  its verified status.
 
-HTTPS: GitHub issues the certificate itself. Tick Enforce HTTPS.
+HTTPS: GitHub issues the certificate (Let's Encrypt) and
+renews it.
+
+After changing the custom domain, push an empty commit to
+redeploy. This clears a cached 404:
+
+    git commit --allow-empty -m "Redeploy" && git push
 
 ## Accounts
 

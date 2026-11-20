@@ -1,0 +1,15 @@
+---
+layout: false
+eleventyExcludeFromCollections: true
+pagination:
+  data: redirects
+  size: 1
+  alias: r
+permalink: "{{ r.from }}index.html"
+---
+<!doctype html>
+<meta charset="utf-8">
+<title>Redirecting</title>
+<link rel="canonical" href="{{ r.to }}">
+<meta http-equiv="refresh" content="0; url={{ r.to }}">
+<p>Moved to <a href="{{ r.to }}">{{ r.to }}</a>.</p>
