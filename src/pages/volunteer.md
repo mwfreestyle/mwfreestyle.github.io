@@ -14,6 +14,16 @@ deposit has been added to program fees.
 
 Use TeamSnap each week to sign up for your volunteer shifts.
 
+<figure class="volunteer-video">
+  <video autoplay muted loop playsinline preload="metadata"
+    poster="/img/volunteer/airbag-poster.jpg"
+    aria-label="Parents inflating the training airbag">
+    <source src="/img/volunteer/airbag.mp4" type="video/mp4">
+  </video>
+  <figcaption>Inflating the training airbag</figcaption>
+</figure>
+<script src="/js/volunteer-video.js" defer></script>
+
 Examples of some volunteer tasks:
 
 - Saturdays & Sundays -- Lunch Supervision Duties

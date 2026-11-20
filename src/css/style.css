@@ -1422,3 +1422,31 @@ tbody td:first-child {
 @media (max-width: 600px) {
   .schedule-note { width: 100%; }
 }
+
+/* Volunteer video */
+.volunteer-video {
+  float: right;
+  width: 35%;
+  margin: 0 0 1rem 1.5rem;
+}
+.volunteer-video video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+.volunteer-video figcaption {
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+main { display: flow-root; }
+@media (max-width: 600px) {
+  .volunteer-video {
+    float: none;
+    width: 100%;
+    max-width: 22rem;
+    margin: 1rem auto;
+  }
+}
